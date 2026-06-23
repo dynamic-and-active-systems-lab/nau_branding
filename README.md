@@ -2,12 +2,57 @@
 
 Official Northern Arizona University brand specifications for use with Claude-assisted design. This repository provides the source of truth for colors, typography, spacing, logo rules, and voice/tone so Claude can produce on-brand designs without manual guidance on every request.
 
-## How to Use This Repo with Claude
+## Using This Repo as a Design System in Claude
 
-1. Open a Claude Code session in this directory (or add it as a project context).
-2. Claude reads `CLAUDE.md` automatically and applies brand rules without being asked.
-3. Reference `css/variables.css` in any web project to get all tokens as CSS custom properties.
-4. Point Claude to specific guideline files for detailed rules on a given topic.
+### Option 1 — Claude.ai Projects (recommended for most NAU users)
+
+This is the easiest way to share the design system across your team without requiring any coding tools.
+
+1. Go to [claude.ai](https://claude.ai) and create a new **Project**.
+2. In the Project's **Knowledge** panel, upload the following files from this repo:
+   - `CLAUDE.md`
+   - `tokens/colors.json`
+   - `tokens/typography.json`
+   - `css/variables.css`
+   - `guidelines/color-usage.md`
+   - `guidelines/logo-usage.md`
+   - `guidelines/typography.md`
+   - `guidelines/voice-tone.md`
+3. Add a **Project instruction** (in the project settings) such as:
+   > You are an NAU design assistant. Always apply the NAU brand guidelines from the uploaded files. Follow every rule in CLAUDE.md without being asked.
+4. Every conversation inside that Project will automatically have access to the full design system. Share the Project with colleagues via the share link.
+
+> **Tip:** When the brand guidelines change, re-upload the affected files to the Project Knowledge panel to keep Claude current.
+
+---
+
+### Option 2 — Claude Code (for developers)
+
+Claude Code reads `CLAUDE.md` automatically whenever you open a session in this directory, so no setup is needed beyond cloning the repo.
+
+```bash
+git clone git@github.com:dynamic-and-active-systems-lab/nau_branding.git
+cd nau_branding
+claude   # CLAUDE.md is loaded automatically
+```
+
+From there you can ask Claude to build components, write copy, or generate layouts and it will apply NAU brand rules without any additional prompting. Reference `css/variables.css` in any web project to inherit all brand tokens.
+
+---
+
+### Option 3 — Paste context into any Claude conversation
+
+If you don't want to set up a Project, copy and paste the contents of `CLAUDE.md` at the start of any Claude conversation. This gives Claude the brand rules for that session only.
+
+---
+
+### Example prompts once the design system is loaded
+
+- *"Create a hero banner for the College of Engineering using NAU brand guidelines."*
+- *"Write an email announcement for a new graduate program. Use NAU voice and tone."*
+- *"Build a registration form component using the NAU CSS variables."*
+- *"What color should I use for a CTA button on a dark blue background?"*
+- *"Review this paragraph for NAU writing style compliance."*
 
 ## Repository Structure
 
