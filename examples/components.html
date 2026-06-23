@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NAU Design System — Component Reference</title>
+  <link rel="stylesheet" href="../css/variables.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-primary);
+      color: var(--color-text-primary);
+      background: var(--color-bg-surface);
+      line-height: var(--leading-normal);
+      padding: var(--space-8);
+    }
+
+    /* --- Layout --- */
+    .section { margin-bottom: var(--space-16); }
+    .section-title {
+      font-size: var(--text-xs);
+      font-weight: var(--font-bold);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--nau-monsoon);
+      border-bottom: 1px solid var(--nau-monsoon);
+      padding-bottom: var(--space-2);
+      margin-bottom: var(--space-6);
+    }
+    .row { display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: flex-start; }
+
+    /* --- Color swatches --- */
+    .swatch {
+      width: 80px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      font-size: var(--text-xs);
+    }
+    .swatch-block { height: 56px; }
+    .swatch-label { padding: var(--space-1) var(--space-2); background: white; border: 1px solid #eee; border-top: none; }
+    .swatch-name { font-weight: var(--font-bold); }
+    .swatch-hex { color: #666; }
+
+    /* --- Typography --- */
+    .type-specimen { margin-bottom: var(--space-4); }
+    .type-label { font-size: var(--text-xs); color: var(--nau-monsoon); margin-bottom: var(--space-1); }
+
+    /* --- Buttons --- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: var(--space-3) var(--space-6);
+      border-radius: var(--radius-md);
+      font-family: var(--font-primary);
+      font-weight: var(--font-bold);
+      font-size: var(--text-base);
+      cursor: pointer;
+      border: 2px solid transparent;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .btn:hover { opacity: 0.88; }
+    .btn-primary { background: var(--nau-true-blue); color: var(--nau-white); }
+    .btn-gold { background: var(--nau-gold); color: var(--nau-true-blue); }
+    .btn-outline { background: transparent; color: var(--nau-true-blue); border-color: var(--nau-true-blue); }
+    .btn-ghost-light { background: transparent; color: var(--nau-white); border-color: var(--nau-white); }
+
+    /* --- Cards --- */
+    .card {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      max-width: 300px;
+    }
+    .card-header {
+      background: var(--nau-true-blue);
+      color: var(--nau-white);
+      padding: var(--space-6);
+    }
+    .card-header-accent { background: var(--nau-gold); color: var(--nau-true-blue); }
+    .card-title { font-size: var(--text-xl); font-weight: var(--font-bold); margin-bottom: var(--space-1); }
+    .card-subtitle { font-size: var(--text-sm); opacity: 0.8; }
+    .card-body { padding: var(--space-6); background: var(--nau-white); }
+    .card-body p { font-size: var(--text-sm); color: var(--nau-true-blue); margin-bottom: var(--space-4); }
+
+    /* --- Badges --- */
+    .badge {
+      display: inline-block;
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--radius-pill);
+      font-size: var(--text-xs);
+      font-weight: var(--font-bold);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .badge-blue { background: var(--nau-true-blue); color: var(--nau-white); }
+    .badge-gold { background: var(--nau-gold); color: var(--nau-true-blue); }
+    .badge-outline { background: transparent; border: 1.5px solid var(--nau-true-blue); color: var(--nau-true-blue); }
+
+    /* --- Alert --- */
+    .alert {
+      border-left: 4px solid;
+      padding: var(--space-4) var(--space-6);
+      border-radius: var(--radius-md);
+      font-size: var(--text-sm);
+      margin-bottom: var(--space-3);
+    }
+    .alert-info { border-color: var(--nau-true-blue); background: #EEF2F8; color: var(--nau-true-blue); }
+    .alert-warning { border-color: var(--nau-gold); background: #FEF9E7; color: #7A5800; }
+    .alert-success { border-color: var(--nau-summer-shade); background: #EAF5EE; color: #004D1A; }
+    .alert-title { font-weight: var(--font-bold); margin-bottom: var(--space-1); }
+
+    /* --- Hero banner --- */
+    .hero {
+      background: var(--nau-true-blue);
+      color: var(--nau-white);
+      padding: var(--space-16) var(--space-12);
+      border-radius: var(--radius-lg);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -20px; right: -20px;
+      width: 160px; height: 160px;
+      background: var(--nau-gold);
+      opacity: 0.15;
+      border-radius: 50%;
+    }
+    .hero-eyebrow {
+      font-size: var(--text-xs);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--nau-gold);
+      font-weight: var(--font-bold);
+      margin-bottom: var(--space-3);
+    }
+    .hero-title {
+      font-size: var(--text-4xl);
+      font-weight: var(--font-black);
+      line-height: var(--leading-tight);
+      margin-bottom: var(--space-4);
+    }
+    .hero-body { font-size: var(--text-lg); opacity: 0.9; margin-bottom: var(--space-8); max-width: 520px; }
+    .hero-actions { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+
+    /* --- Form --- */
+    .form-group { margin-bottom: var(--space-5); }
+    .form-label {
+      display: block;
+      font-size: var(--text-sm);
+      font-weight: var(--font-bold);
+      color: var(--nau-true-blue);
+      margin-bottom: var(--space-2);
+    }
+    .form-input {
+      width: 100%; max-width: 360px;
+      padding: var(--space-3) var(--space-4);
+      border: 1.5px solid var(--nau-monsoon);
+      border-radius: var(--radius-md);
+      font-family: var(--font-primary);
+      font-size: var(--text-base);
+      color: var(--nau-true-blue);
+      transition: border-color 0.15s;
+    }
+    .form-input:focus {
+      outline: none;
+      border-color: var(--nau-true-blue);
+      box-shadow: 0 0 0 3px rgba(250, 192, 26, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Color Palette -->
+  <section class="section">
+    <div class="section-title">Color Palette</div>
+    <div class="row">
+      <div class="swatch">
+        <div class="swatch-block" style="background:#002454"></div>
+        <div class="swatch-label"><div class="swatch-name">True Blue</div><div class="swatch-hex">#002454</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#FAC01A"></div>
+        <div class="swatch-label"><div class="swatch-name">Gold</div><div class="swatch-hex">#FAC01A</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#C3B8B2"></div>
+        <div class="swatch-label"><div class="swatch-name">Monsoon</div><div class="swatch-hex">#C3B8B2</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#0066B2"></div>
+        <div class="swatch-label"><div class="swatch-name">Twilight</div><div class="swatch-hex">#0066B2</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#F68300"></div>
+        <div class="swatch-label"><div class="swatch-name">Sunset</div><div class="swatch-hex">#F68300</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#007A33"></div>
+        <div class="swatch-label"><div class="swatch-name">Summer Shade</div><div class="swatch-hex">#007A33</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#CF4527"></div>
+        <div class="swatch-label"><div class="swatch-name">Red Rock</div><div class="swatch-hex">#CF4527</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#00ADB5"></div>
+        <div class="swatch-label"><div class="swatch-name">Supai</div><div class="swatch-hex">#00ADB5</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#41B6E6"></div>
+        <div class="swatch-label"><div class="swatch-name">Sky</div><div class="swatch-hex">#41B6E6</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Typography -->
+  <section class="section">
+    <div class="section-title">Typography (Web — Acumin Pro)</div>
+    <div class="type-specimen"><div class="type-label">Display / H1 — 3rem, Black</div>
+      <div style="font-size:var(--text-5xl);font-weight:var(--font-black);line-height:var(--leading-tight);">Bold Impact</div></div>
+    <div class="type-specimen"><div class="type-label">H2 — 2.25rem, Bold</div>
+      <div style="font-size:var(--text-4xl);font-weight:var(--font-bold);">Inclusive Community</div></div>
+    <div class="type-specimen"><div class="type-label">H3 — 1.5rem, Bold</div>
+      <div style="font-size:var(--text-2xl);font-weight:var(--font-bold);">Supportive Faculty</div></div>
+    <div class="type-specimen"><div class="type-label">Body — 1rem, Regular</div>
+      <div style="font-size:var(--text-base);max-width:600px;">Northern Arizona University welcomes students who bring diverse experiences, perspectives, and ambitions, empowering them with knowledge, skills, and confidence to improve their lives and those around them.</div></div>
+    <div class="type-specimen"><div class="type-label">Caption / Label — 0.75rem, Bold, uppercase</div>
+      <div style="font-size:var(--text-xs);font-weight:var(--font-bold);letter-spacing:0.08em;text-transform:uppercase;">College of Engineering, Forestry & Natural Sciences</div></div>
+  </section>
+
+  <!-- Buttons -->
+  <section class="section">
+    <div class="section-title">Buttons</div>
+    <div class="row" style="align-items:center;">
+      <a href="#" class="btn btn-primary">Apply Now</a>
+      <a href="#" class="btn btn-gold">Learn More</a>
+      <a href="#" class="btn btn-outline">Explore Programs</a>
+    </div>
+    <div style="background:var(--nau-true-blue);padding:var(--space-6);border-radius:var(--radius-md);margin-top:var(--space-4);display:inline-flex;gap:var(--space-4);">
+      <a href="#" class="btn btn-gold">Apply Now</a>
+      <a href="#" class="btn btn-ghost-light">Learn More</a>
+    </div>
+  </section>
+
+  <!-- Badges -->
+  <section class="section">
+    <div class="section-title">Badges</div>
+    <div class="row">
+      <span class="badge badge-blue">New Program</span>
+      <span class="badge badge-gold">Featured</span>
+      <span class="badge badge-outline">Online Available</span>
+    </div>
+  </section>
+
+  <!-- Cards -->
+  <section class="section">
+    <div class="section-title">Cards</div>
+    <div class="row">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Computer Science</div>
+          <div class="card-subtitle">College of Engineering</div>
+        </div>
+        <div class="card-body">
+          <p>Build the skills to create technology that matters — from AI to cybersecurity to software engineering.</p>
+          <a href="#" class="btn btn-primary" style="font-size:var(--text-sm);padding:var(--space-2) var(--space-4);">View Program</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header card-header-accent">
+          <div class="card-title">Financial Aid</div>
+          <div class="card-subtitle">Valuable Opportunity</div>
+        </div>
+        <div class="card-body">
+          <p>NAU offers competitive scholarships and aid packages designed to make your education accessible.</p>
+          <a href="#" class="btn btn-outline" style="font-size:var(--text-sm);padding:var(--space-2) var(--space-4);">Explore Aid</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alerts -->
+  <section class="section">
+    <div class="section-title">Alerts</div>
+    <div class="alert alert-info">
+      <div class="alert-title">Application Deadline</div>
+      Fall 2025 applications close February 1. Submit all materials through the student portal.
+    </div>
+    <div class="alert alert-warning">
+      <div class="alert-title">Registration Opens Soon</div>
+      Priority registration for continuing students begins October 28.
+    </div>
+    <div class="alert alert-success">
+      <div class="alert-title">Application Received</div>
+      Your application has been submitted. You will hear from us within 4–6 weeks.
+    </div>
+  </section>
+
+  <!-- Hero -->
+  <section class="section">
+    <div class="section-title">Hero Banner</div>
+    <div class="hero">
+      <div class="hero-eyebrow">Northern Arizona University</div>
+      <h1 class="hero-title">Your Bold Future<br>Starts Here</h1>
+      <p class="hero-body">Join a welcoming community of learners, mentors, and innovators committed to making a real difference in the world.</p>
+      <div class="hero-actions">
+        <a href="#" class="btn btn-gold">Apply Now</a>
+        <a href="#" class="btn btn-ghost-light">Explore Programs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form -->
+  <section class="section">
+    <div class="section-title">Form Elements</div>
+    <div class="form-group">
+      <label class="form-label" for="first-name">First Name</label>
+      <input class="form-input" type="text" id="first-name" placeholder="Jane">
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="email">NAU Email</label>
+      <input class="form-input" type="email" id="email" placeholder="jane.doe@nau.edu">
+    </div>
+    <button class="btn btn-primary">Submit</button>
+  </section>
+
+</body>
+</html>

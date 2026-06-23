@@ -1,0 +1,76 @@
+{
+  "_source": "in.nau.edu/visual-identity-guide/typography/ and Visual-Identity-Guide.pdf v3 (2018)",
+
+  "families": {
+    "institutional-primary": {
+      "name": "Univers",
+      "variant": "regular (not condensed)",
+      "license": "Purchased — myfonts.com or fonts.com",
+      "usage": "All university-wide marketing and communications. Body copy in print. NOT used on web.",
+      "fallback": "Arial"
+    },
+    "web": {
+      "name": "Acumin Pro",
+      "variants": ["Acumin Pro", "Acumin Pro Condensed", "Acumin Pro Extra Condensed"],
+      "usage": "NAU web pages only. These three weights/widths only — no others."
+    },
+    "correspondence": {
+      "name": "Calibri",
+      "usage": "Email signatures, letters, envelopes when Univers is unavailable."
+    },
+    "formal": {
+      "name": "Adobe Caslon Pro",
+      "license": "Purchased",
+      "usage": "Sparingly — formal documents and communications with sophisticated audiences.",
+      "fallback": "Times New Roman"
+    },
+    "logo": {
+      "name": "Bank Gothic",
+      "usage": "NAU logo construction only. Slightly altered from standard Bank Gothic. Do not use for other purposes."
+    }
+  },
+
+  "univers-weights": {
+    "75-black": { "weight": 900, "style": "normal" },
+    "65-bold": { "weight": 700, "style": "normal" },
+    "65-bold-oblique": { "weight": 700, "style": "italic" },
+    "55-roman": { "weight": 400, "style": "normal" },
+    "55-oblique": { "weight": 400, "style": "italic" },
+    "45-light": { "weight": 300, "style": "normal" },
+    "55-condensed": { "weight": 400, "style": "normal", "width": "condensed" },
+    "47-condensed-light": { "weight": 300, "style": "normal", "width": "condensed" }
+  },
+
+  "specifications": {
+    "business-card": {
+      "name": { "font": "Univers 65 Bold", "size": "7pt", "leading": "11pt", "color": "Pantone 281" },
+      "title": { "font": "Univers 45 Light", "size": "7pt", "leading": "11pt", "color": "Pantone 281" },
+      "contact": { "font": "Univers 45 Light", "size": "7pt", "leading": "11pt", "color": "Pantone 281" }
+    },
+    "letterhead": {
+      "unit-name": { "font": "Univers 65 Bold", "size": "7.5pt", "leading": "11pt", "color": "Pantone 281" },
+      "contact": { "font": "Univers 45 Light", "size": "7.5pt", "leading": "11pt", "color": "Pantone 281" },
+      "body-copy": { "font": "Calibri Light", "size": "10pt", "color": "black" }
+    },
+    "email-signature": {
+      "name-title": { "font": "Calibri Bold", "size": "10pt", "color": "NAU True Blue or black" },
+      "body": { "font": "Calibri", "size": "10pt", "color": "NAU True Blue or black" }
+    },
+    "engraved-name-tag": {
+      "name": { "font": "Univers 55 Roman", "size": "18pt", "color": "Pantone 281" },
+      "title": { "font": "Univers 55 Roman", "size": "12pt", "color": "Pantone 281" },
+      "unit": { "font": "Univers 55 Roman", "size": "10pt", "color": "Pantone 281" }
+    }
+  },
+
+  "college-fonts": {
+    "_note": "Exclusive to each college. Do not borrow across colleges.",
+    "CEFNS": "Industry (all variations)",
+    "Franke-FCB": "Futura (all non-condensed weights)",
+    "SCE": "Univers Condensed (Light, Roman, Bold)",
+    "CAL": { "primary": "Brush Up", "free-alt": "Caveat Brush" },
+    "CHHS": "Futura Condensed",
+    "COE": { "primary": "Benguiat Caslon", "free-alt": "Playfair Display" },
+    "SBS": "Futura (non-condensed only)"
+  }
+}

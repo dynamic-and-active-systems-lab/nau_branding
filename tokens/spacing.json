@@ -1,0 +1,44 @@
+{
+  "_note": "Spacing scale consistent with NAU's print specifications. Base unit is 4px.",
+
+  "scale": {
+    "1":  "4px",
+    "2":  "8px",
+    "3":  "12px",
+    "4":  "16px",
+    "5":  "20px",
+    "6":  "24px",
+    "8":  "32px",
+    "10": "40px",
+    "12": "48px",
+    "16": "64px",
+    "20": "80px",
+    "24": "96px"
+  },
+
+  "logo-clear-space": {
+    "rule": "Minimum clear space on all sides equals the height of the ligature 'A' in the logo.",
+    "minimum-print-width-institutional": "0.75in (185px at 72dpi)",
+    "minimum-print-width-two-color-gold-type": "1.0in (246px at 72dpi)",
+    "minimum-print-width-unit-primary": "1.375in (325px at 72dpi)",
+    "minimum-print-width-unit-horizontal": "1.125in (276px at 72dpi)",
+    "minimum-print-width-heritage": "1.5in",
+    "seal-max-diameter": "3.5in",
+    "seal-min-diameter": "1.75in"
+  },
+
+  "layout": {
+    "letterhead-top-margin": "0.5833in",
+    "letterhead-address-from-top": "1.5833in",
+    "letterhead-bottom-margin": "0.75in",
+    "letterhead-left-margin": "1in",
+    "letterhead-right-margin": "1in"
+  },
+
+  "border-radius": {
+    "sm":  "4px",
+    "md":  "8px",
+    "lg":  "12px",
+    "pill": "9999px"
+  }
+}

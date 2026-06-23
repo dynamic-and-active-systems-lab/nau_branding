@@ -1,0 +1,103 @@
+/**
+ * NAU Design Tokens — CSS Custom Properties
+ * Source: in.nau.edu/visual-identity-guide/
+ * Do not modify color values; they are exact brand specifications.
+ */
+
+:root {
+  /* === PRIMARY COLORS === */
+  --nau-true-blue:    #002454;   /* Pantone 282 C — dominant brand color */
+  --nau-gold:         #FAC01A;   /* Pantone 3514 C — mountain, accents */
+
+  /* === SECONDARY COLORS === */
+  /* Use sparingly; 80/20 balance favoring primary colors. */
+  --nau-monsoon:      #C3B8B2;   /* Pantone 436 C — warm neutral gray */
+  --nau-sunset:       #F68300;   /* Pantone 158 C — warm orange */
+  --nau-summer-shade: #007A33;   /* Pantone 356 C — forest green */
+  --nau-red-rock:     #CF4527;   /* Pantone 173 C — red-orange */
+  --nau-supai:        #00ADB5;   /* Pantone 7467 C — teal */
+  --nau-sky:          #41B6E6;   /* Pantone 299 C — light blue (very sparingly) */
+  --nau-twilight:     #0066B2;   /* Pantone 300 C — medium blue */
+
+  /* === NEUTRAL === */
+  --nau-white:        #FFFFFF;
+  --nau-black:        #000000;
+
+  /* === SEMANTIC ALIASES === */
+  --color-bg-primary:    var(--nau-true-blue);
+  --color-bg-surface:    var(--nau-white);
+  --color-bg-subtle:     #F5F3F2;   /* tint of monsoon */
+  --color-text-primary:  var(--nau-true-blue);
+  --color-text-inverse:  var(--nau-white);
+  --color-text-accent:   var(--nau-gold);
+  --color-accent:        var(--nau-gold);
+  --color-interactive:   var(--nau-twilight);
+  --color-focus:         var(--nau-gold);
+  --color-border:        var(--nau-monsoon);
+
+  /* === TYPOGRAPHY === */
+  /* Web: Acumin Pro (3 variants only) */
+  --font-primary:    'Acumin Pro', Arial, sans-serif;
+  --font-condensed:  'Acumin Pro Condensed', Arial Narrow, sans-serif;
+  --font-x-condensed:'Acumin Pro Extra Condensed', Arial Narrow, sans-serif;
+  /* Print/document: Univers (licensed) */
+  --font-institutional: 'Univers', Arial, sans-serif;
+  /* Formal: Adobe Caslon Pro */
+  --font-formal:     'Adobe Caslon Pro', 'Times New Roman', Georgia, serif;
+  /* Correspondence fallback */
+  --font-correspondence: 'Calibri', Arial, sans-serif;
+
+  /* Type scale */
+  --text-xs:   0.75rem;    /* 12px */
+  --text-sm:   0.875rem;   /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg:   1.125rem;   /* 18px */
+  --text-xl:   1.25rem;    /* 20px */
+  --text-2xl:  1.5rem;     /* 24px */
+  --text-3xl:  1.875rem;   /* 30px */
+  --text-4xl:  2.25rem;    /* 36px */
+  --text-5xl:  3rem;       /* 48px */
+
+  /* Font weights */
+  --font-light:   300;
+  --font-regular: 400;
+  --font-bold:    700;
+  --font-black:   900;
+
+  /* Line heights */
+  --leading-tight:  1.25;
+  --leading-normal: 1.5;
+  --leading-loose:  1.75;
+
+  /* === SPACING (4px base unit) === */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* === BORDER RADIUS === */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-pill: 9999px;
+
+  /* === LOGO MINIMUM SIZES === */
+  /* Use these as minimum widths when placing the NAU logo */
+  --logo-min-institutional:   185px;   /* 0.75in — all colorations except gold type */
+  --logo-min-gold-type:       246px;   /* 1.0in — two-color gold type only */
+  --logo-min-unit-primary:    325px;   /* 1.375in */
+  --logo-min-unit-horizontal: 276px;   /* 1.125in */
+
+  /* === SHADOWS === */
+  --shadow-sm:  0 1px 2px rgba(0, 36, 84, 0.08);
+  --shadow-md:  0 4px 6px rgba(0, 36, 84, 0.10);
+  --shadow-lg:  0 10px 15px rgba(0, 36, 84, 0.12);
+}

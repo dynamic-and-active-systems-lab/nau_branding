@@ -1,0 +1,88 @@
+{
+  "$schema": "https://design-tokens-community-group.org/format/",
+  "_source": "in.nau.edu/visual-identity-guide/color/ — authoritative as of 2023",
+  "_note": "Always use these exact values. Do not approximate or substitute.",
+
+  "primary": {
+    "nau-true-blue": {
+      "hex": "#002454",
+      "rgb": { "r": 0, "g": 36, "b": 84 },
+      "cmyk": { "c": 100, "m": 60, "y": 0, "k": 70 },
+      "pantone": "282 C",
+      "usage": "Signature color. Must appear as the dominant color in all university communications. Use for primary text, backgrounds, and UI surfaces."
+    },
+    "nau-gold": {
+      "hex": "#FAC01A",
+      "rgb": { "r": 250, "g": 192, "b": 26 },
+      "cmyk": { "c": 0, "m": 27, "y": 100, "k": 0 },
+      "pantone": "3514 C",
+      "usage": "Secondary primary color. Used for mountain graphic in logo, accent elements, CTAs on dark backgrounds. Never use as primary background at scale."
+    }
+  },
+
+  "secondary": {
+    "_rule": "Secondary colors support NAU Gold and True Blue. Never dominate the primary palette. Target an 80/20 balance favoring primary colors. Do not apply to body text.",
+    "monsoon": {
+      "hex": "#C3B8B2",
+      "rgb": { "r": 195, "g": 184, "b": 178 },
+      "cmyk": { "c": 24, "m": 24, "y": 26, "k": 0 },
+      "pantone": "436 C",
+      "usage": "Neutral warm gray. Use for subtle backgrounds, dividers, inactive states."
+    },
+    "sunset": {
+      "hex": "#F68300",
+      "rgb": { "r": 244, "g": 119, "b": 34 },
+      "cmyk": { "c": 0, "m": 66, "y": 99, "k": 0 },
+      "pantone": "158 C",
+      "usage": "Warm orange. Use sparingly for accents and visual interest."
+    },
+    "summer-shade": {
+      "hex": "#007A33",
+      "rgb": { "r": 0, "g": 133, "b": 63 },
+      "cmyk": { "c": 95, "m": 0, "y": 100, "k": 27 },
+      "pantone": "356 C",
+      "usage": "Forest green. Use sparingly for accents."
+    },
+    "red-rock": {
+      "hex": "#CF4527",
+      "rgb": { "r": 213, "g": 68, "b": 28 },
+      "cmyk": { "c": 11, "m": 87, "y": 100, "k": 2 },
+      "pantone": "173 C",
+      "usage": "Red-orange. Use sparingly; avoid for error states (reserve semantic red for that)."
+    },
+    "supai": {
+      "hex": "#00ADB5",
+      "rgb": { "r": 0, "g": 172, "b": 165 },
+      "cmyk": { "c": 95, "m": 0, "y": 35, "k": 0 },
+      "pantone": "7467 C",
+      "usage": "Teal. Use sparingly for digital accents."
+    },
+    "sky": {
+      "hex": "#41B6E6",
+      "rgb": { "r": 0, "g": 157, "b": 220 },
+      "cmyk": { "c": 85, "m": 19, "y": 0, "k": 0 },
+      "pantone": "299 C",
+      "usage": "Light blue. Use very sparingly — must not overwhelm NAU True Blue or create visual confusion with the primary brand blue."
+    },
+    "twilight": {
+      "hex": "#0066B2",
+      "rgb": { "r": 0, "g": 102, "b": 179 },
+      "cmyk": { "c": 100, "m": 60, "y": 0, "k": 0 },
+      "pantone": "300 C",
+      "usage": "Medium blue. Use sparingly as a supporting blue tone."
+    }
+  },
+
+  "semantic": {
+    "_note": "Semantic mappings for UI use. Derived from brand palette.",
+    "background-primary": "#002454",
+    "background-surface": "#FFFFFF",
+    "background-subtle": "#C3B8B2",
+    "text-primary": "#002454",
+    "text-on-dark": "#FFFFFF",
+    "text-on-dark-accent": "#FAC01A",
+    "accent-primary": "#FAC01A",
+    "accent-interactive": "#0066B2",
+    "focus-ring": "#FAC01A"
+  }
+}
