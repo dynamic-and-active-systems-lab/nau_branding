@@ -30,7 +30,7 @@ guidelines/
   voice-tone.md            ← Brand pillars, personality, AP style, legal copy
 
 logos/
-  README.md                ← Where to download official logo files (Widen Collective)
+  README.md                ← Where to download official logo files (Mediagraph)
 
 examples/
   components.html          ← Reference UI: color palette, type, buttons, cards, alerts, hero, forms
@@ -63,7 +63,7 @@ All specifications are drawn from:
 
 ## Important Notes
 
-- **Logo files are not stored here.** Download from [nau.edu/digitalassets/widen-collective](https://nau.edu/digitalassets/widen-collective). All trademark use requires authorization from the Office of Trademarks & Licensing.
+- **Logo files are not stored here.** Download from [mediagraph.io/nau/login](https://mediagraph.io/nau/login) (NAU institutional login required). All trademark use requires authorization from the Office of Trademarks & Licensing.
 - **Source PDFs are not committed** to public repositories due to trademark sensitivity. Store locally in `RESOURCES/`.
 - Color values in this repo reflect the authoritative web guide (in.nau.edu). Where the PDFs differ, the website values take precedence.
 
