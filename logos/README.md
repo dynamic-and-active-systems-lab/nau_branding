@@ -6,7 +6,7 @@ Logo files are **not stored in this repository** because they are trademark-prot
 
 | Need | Source |
 |------|--------|
-| Download approved logo files | [nau.edu/digitalassets/widen-collective](https://nau.edu/digitalassets/widen-collective) |
+| Download approved logo files | [mediagraph.io](https://mediagraph.io) *(NAU institutional login required)* |
 | Request a specific logo | [nau.edu/logorequest](https://nau.edu/logorequest) |
 | Custom unit logo creation | Contact University Marketing |
 | Seal usage approval | Contact University Marketing |

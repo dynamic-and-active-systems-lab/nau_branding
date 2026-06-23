@@ -54,7 +54,7 @@ Full scale in `tokens/spacing.json` and `css/variables.css`.
 8. Maintain clear space equal to the ligature "A" height on all sides.
 9. Minimum logo width on web: **185px**. Never render smaller.
 10. Do not distort, rotate, tint, crop, recolor, or alter the logo in any way.
-11. See `guidelines/logo-usage.md` for full rules. Actual logo files: nau.edu/digitalassets/widen-collective
+11. See `guidelines/logo-usage.md` for full rules. Actual logo files: mediagraph.io (NAU institutional login required)
 
 ### Typography
 12. On web, use Acumin Pro only (3 variants). On print, use Univers. Never swap these.

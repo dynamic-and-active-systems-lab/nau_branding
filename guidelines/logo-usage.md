@@ -99,7 +99,7 @@ Maintain a minimum clear space equal to **the height of the ligature "A"** on al
 
 ## Digital Assets
 
-Download approved logo files: [nau.edu/digitalassets/widen-collective](https://nau.edu/digitalassets/widen-collective)
+Download approved logo files: [mediagraph.io](https://mediagraph.io) *(NAU institutional login required)*
 
 Request logos: [nau.edu/logorequest](https://nau.edu/logorequest)
 
